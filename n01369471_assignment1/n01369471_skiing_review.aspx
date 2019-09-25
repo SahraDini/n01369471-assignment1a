@@ -13,90 +13,77 @@
             <h1>Skiing Review Form</h1>
         </section>
         <main>
-            <div class="col2">
-                <h2>Provide information below to help us improve!</h2>
-            <section>
-                <label>First Name:</label>
-                <input type="text" id="html_review_firstname" name="html_review_firstname" />
-                <label>Last Name:</label>
-                <input type="text" id="html_review_lastname" name="html_review_lastname" />
-            </section>
-            <section>
-                <h3>Country:</h3>
-                <label>Please select the country that you currently reside in:</label>
-                <select id="html_review_country" name="html_review_country">
-                    <option value="">-- Choose One --</option>
-                    <option value="Canada">Canada</option>
-                    <option value="United States of America">United States of America</option>
-                    <option value="Mexico">Mexico</option>
-                </select>
-            </section>
-            <section>
-                <h3>We hope you enjoyed your time with us!</h3>
-                <label>Would you return?</label>
-                <div>
-                    <input type="radio" id="html_review_return_1" name="html_review_return" value="yes" /><label for="html_review_return_1">Yes</label>
-                </div>
-                <div>
-                    <input type="radio" id="html_review_return_2" name="html_review_return" value="maybe" /><label for="html_review_return_2">Maybe</label>
-                </div>
-                <div>
-                    <input type="radio" id="html_review_return_3" name="html_review_return" value="no" /><label for="html_review_return_3">No</label>
-                </div>
-            </section>
-            <section>
-                <h3>What's your favourite mountain to ski on?</h3>
-                <div><input type="checkbox" value="bumpymountain" id="html_review_favouritemountain_1" name="html_review_favouritemountain_1" /><label for="html_review_favouritemountain_1">Bumpy Mountain</label></div>
-                <div><input type="checkbox" value="highhill" id="html_review_favouritemountain_2" name="html_review_favouritemountain_2" /><label for="html_review_favouritemountain_2">High Hill</label></div>
-                <div><input type="checkbox" value="riskyhill" id="html_review_favouritemountain_3" name="html_review_favouritemountain_3" /><label for="html_review_favouritemountain_3">Risky Hill</label></div>                
-            </section>
-         <section>
-             <h3>Thank you for your time!</h3>
-             <input type="submit" value="enter" />
-         </section>
-           </div>
-            <div class="col2">
-                <h2>Skiing Review Form</h2>
+                  <h2>Please fill in the form:</h2>
             <section>
                  <h3>Provide information below to help us improve!</h3>
                  <label>First Name:</label>
-                <asp:TextBox runat="server" ID="aspx_review_firstname"></asp:TextBox>
+                <asp:TextBox runat="server" ID="review_firstname"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="review_firstname" ErrorMessage="Please enter First Name."></asp:RequiredFieldValidator>
+            </section>
+            <section>
                     <label>Last Name:</label>
-                  <asp:TextBox runat="server" ID="aspx_review_lastname"></asp:TextBox>
+                <asp:TextBox runat="server" ID="review_lastname"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="review_lastname" ErrorMessage="Please enter Last Name."></asp:RequiredFieldValidator>
             </section>
             <section>
                 <h3>Country:</h3>
                 <label>Please select the country you currently reside in:</label>
-                        <asp:DropDownList runat="server" ID="aspx_review_country">
-                            <asp:ListItem Text="-- Choose One --" Value=""></asp:ListItem>
-                            <asp:ListItem Text="Canada" Value="canada"></asp:ListItem>
-                            <asp:ListItem Text="United States of America" Value="unitedstatesofamerica"></asp:ListItem>
-                            <asp:ListItem Text="Mexico" Value="mexico"></asp:ListItem>
-                        </asp:DropDownList>
+                <asp:DropDownList runat="server" ID="review_country">
+                    <asp:ListItem Text="-- Choose One --" Value=""></asp:ListItem>
+                    <asp:ListItem Text="Canada" Value="canada"></asp:ListItem>
+                    <asp:ListItem Text="United States of America" Value="unitedstatesofamerica"></asp:ListItem>
+                    <asp:ListItem Text="Mexico" Value="mexico"></asp:ListItem>
+                    <asp:ListItem Text="Other" Value="other"></asp:ListItem>
+                     </asp:DropDownList>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="review_country" ErrorMessage="Please select a country!"></asp:RequiredFieldValidator>
              </section>
              <section>
-                    <h3>We hoped you enjoyed your time with us!</h3>
-                    <label>Would you return?</label>
-                    <div>
-                           <asp:RadioButtonList runat="server" ID="aspx_review_return">
-                           <asp:ListItem Text="Yes" Value="yes"></asp:ListItem>
-                           <asp:ListItem Text="Maybe" Value="maybe"></asp:ListItem>
-                           <asp:ListItem Text="No" Value="No"></asp:ListItem>
+                <h3>We hoped you enjoyed your time with us!</h3>
+             <div>
+                <label>Would you return?</label>
+             </div>
+             <div>
+               <asp:RadioButtonList runat="server" ID="review_return">
+                    <asp:ListItem Text="Yes" Value="yes"></asp:ListItem>
+                    <asp:ListItem Text="Maybe" Value="maybe"></asp:ListItem>
+                    <asp:ListItem Text="No" Value="No"></asp:ListItem>
                       </asp:RadioButtonList>
-                    </div>
-                </section>
-                 <section>
-                     <h3>What's your favourite mountain to ski on?</h3>
-                     <asp:CheckBoxList ID="aspx_review_favouritemountain" runat="server">
-                          <asp:ListItem Text="Bumpy Mountain" Value="bumpymountain"></asp:ListItem>
-                          <asp:ListItem Text="High Hill" Value="highhill"></asp:ListItem>
-                          <asp:ListItem Text="Risky Hill" Value="riskyhill"></asp:ListItem>
-                     </asp:CheckBoxList>
-                 </section>
-                <section>
-                    <asp:Button runat="server" />
-                </section>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="review_return" ErrorMessage="Please let us know if you'll come back!"></asp:RequiredFieldValidator>
             </div>
+            </section>
+            <%/*There is not an author, however, the date accessed is 2019-09-24 and the site referenced is https://www.codeproject.com/Articles/3882/ASP-NET-Validators-Unclouded */%>
+            <%/*The purpose I am using this is because it is from a trusted website, the expression pattern used is not perfect as stated on the site however has the basic
+               understanding of valid characters, number of @ symbols and periods that can be used for an e-mail*/%>
+            <section>
+               <h3>What is your email?</h3>
+                <asp:TextBox runat="server" ID="review_email"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="review_email" ErrorMessage="Please enter your email address"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator runat="server" 
+                    ControlToValidate="review_email" 
+                    ErrorMessage="Please enter a valid email address." 
+                    ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">
+                </asp:RegularExpressionValidator>
+             </section>
+            <section>
+                <h3>Rate your experience out of 5 stars! 1 beinging highly dissatisfied with the experience and 5 being highly satisfied.</h3>
+                <asp:TextBox runat="server" ID="review_rating"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="review_rating" ErrorMessage="Please enter a number!"></asp:RequiredFieldValidator>
+                <asp:RangeValidator runat="server"
+                ControlToValidate="review_rating"
+                MaximumValue="5"
+                MinimumValue="1"
+                ErrorMessage="Please enter a number between 1-5"></asp:RangeValidator>
+            </section>
+            <section>
+            <asp:ValidationSummary runat="server" ShowSummary="true" />
+        </section>
+        <section id="skiing_review_summary" runat="server">
+
+        </section>
+        <section>
+            <input type="submit" value="submit" />
+        </section>
+   
         </main>
     </form>
 </body>

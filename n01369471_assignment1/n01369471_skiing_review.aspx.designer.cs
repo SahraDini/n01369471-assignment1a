@@ -22,48 +22,66 @@ namespace n01369471_assignment1 {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// aspx_review_firstname control.
+        /// review_firstname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox aspx_review_firstname;
+        protected global::System.Web.UI.WebControls.TextBox review_firstname;
         
         /// <summary>
-        /// aspx_review_lastname control.
+        /// review_lastname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox aspx_review_lastname;
+        protected global::System.Web.UI.WebControls.TextBox review_lastname;
         
         /// <summary>
-        /// aspx_review_country control.
+        /// review_country control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList aspx_review_country;
+        protected global::System.Web.UI.WebControls.DropDownList review_country;
         
         /// <summary>
-        /// aspx_review_return control.
+        /// review_return control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList aspx_review_return;
+        protected global::System.Web.UI.WebControls.RadioButtonList review_return;
         
         /// <summary>
-        /// aspx_review_favouritemountain control.
+        /// review_email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList aspx_review_favouritemountain;
+        protected global::System.Web.UI.WebControls.TextBox review_email;
+        
+        /// <summary>
+        /// review_rating control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox review_rating;
+        
+        /// <summary>
+        /// skiing_review_summary control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl skiing_review_summary;
     }
 }
